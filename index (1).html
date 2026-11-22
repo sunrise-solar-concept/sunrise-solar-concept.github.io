@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sunrise Panels | Solar Panels for Electric Vehicles (Concept)</title>
+<meta name="description" content="Sunrise Panels is a proposed concept for EV solar charging: solar car panels that aim to give electric vehicle drivers another source of clean energy. $8,999 installed.">
+<meta name="keywords" content="solar panels for electric vehicles, EV solar charging, solar car panels, electric vehicle solar panels, solar-powered electric cars, sustainable vehicle technology, Tesla solar charging concept">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#111111">
+<link rel="canonical" href="https://sunrise-solar-concept.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sunrise Panels | Charge Anywhere. Drive Everywhere.">
+<meta property="og:description" content="A proposed solar panel system for Tesla and other electric vehicles. Academic project concept.">
+<meta property="og:url" content="https://sunrise-solar-concept.github.io/">
+<meta property="og:site_name" content="Sunrise Panels">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'%3E%3Crect width='34' height='34' rx='7' fill='%23111111'/%3E%3Cpath d='M7 21a10 10 0 0 1 20 0Z' fill='%23D71920'/%3E%3Cpath d='M5 24h24' stroke='%23B9C4C9' stroke-width='2'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Organization","name":"Sunrise Panels (academic concept)","url":"https://sunrise-solar-concept.github.io/","areaServed":"CA","slogan":"Charge Anywhere. Drive Everywhere.","sameAs":["https://www.instagram.com/sunrisesolarconcept","https://www.tiktok.com/@sunrisesolarconcept","https://www.youtube.com/@sunrisesolarconcept"]},
+{"@type":"Product","name":"Sunrise Panels","category":"Solar-powered electric vehicle accessories","description":"Proposed solar panel system for Tesla and other electric vehicles, including professional installation and a one-year warranty. Academic project concept.","offers":{"@type":"Offer","price":"8999","priceCurrency":"CAD","availability":"https://schema.org/PreOrder"}}
+]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* VOICE: premium automotive launch page, calm and confident, honest about being a concept
+   IDEA: a car maker's launch microsite with a configurator-style pre-order checkout
+   PICTURE: a generic EV in profile with a solar roof catching rays from a low red sun
+   COLOUR and TYPE: black #111 field, white #F5F5F5, one red #D71920 accent, silver #B9C4C9 lines; Inter
+   LAYOUT: sticky bar, full-bleed hero, single pages routed on the hash, stacked on phones */
+:root{color-scheme:light dark;--bg:light-dark(#F5F5F5,#111111);--ink:light-dark(#111111,#F5F5F5);--soft:light-dark(#4a4f52,#B9C4C9);--line:light-dark(#d7dde0,#2a2d2f);--card:light-dark(#ffffff,#1a1c1d);--tint:light-dark(#fbe9ea,#2a1416);--red:#D71920;--silver:#B9C4C9;--blk:#111111}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Inter,Helvetica,Arial,sans-serif;overflow-x:clip;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+svg{display:block;max-width:100%}
+.wrap{max-width:1240px;margin:0 auto}
+.band{padding:clamp(40px,6vw,88px) max(5vw,16px)}
+.tight{padding-top:0}
+h1,h2,h3{line-height:1.08;text-wrap:balance;margin:0 0 .5em;font-weight:600;letter-spacing:-.01em}
+h1{font-size:clamp(36px,6vw,64px)}h2{font-size:clamp(28px,4vw,44px)}h3{font-size:20px;line-height:1.3}
+p{margin:0 0 1em;max-width:68ch}.lead{font-size:clamp(17px,1.6vw,19px);color:var(--soft)}
+.note{font-size:13px;color:var(--soft)}
+.kicker{color:var(--red);font-weight:600;font-size:14px;margin-bottom:10px}
+.nowrap{white-space:nowrap}
+
+/* concept strip + header */
+.strip{background:var(--red);color:#fff;font-size:13px;text-align:center;padding:7px 16px}
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--blk) 94%,transparent);backdrop-filter:blur(10px);color:#F5F5F5}
+.bar{display:flex;align-items:center;gap:12px;padding:10px max(5vw,16px);max-width:1340px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:600;font-size:16px;line-height:1.2;margin-right:auto}
+.brand small{display:block;font-weight:400;color:var(--silver);font-size:12px}
+nav ul{list-style:none;margin:0;padding:0;display:flex;gap:2px;flex-wrap:wrap}
+nav a{display:block;padding:10px 12px;border-radius:6px;text-decoration:none;font-size:14px;color:#dfe5e8}
+nav a:hover,nav a[aria-current=page]{background:#ffffff14;color:#fff}
+nav a[aria-current=page]{box-shadow:inset 0 -2px 0 var(--red)}
+.btn.hbtn{min-height:40px;padding:0 16px;font-size:14px;white-space:nowrap;flex:none}.brand span{white-space:nowrap}
+.menu{display:none;background:none;border:1px solid #ffffff33;color:#fff;border-radius:8px;width:44px;height:44px;cursor:pointer;flex:none}
+.menu span{display:block;width:18px;height:2px;background:currentColor;margin:4px auto}
+@media(max-width:960px){
+  .menu{display:block}
+  nav{position:absolute;left:0;right:0;top:100%;background:var(--blk);border-top:1px solid #ffffff1a;display:none;padding:8px max(5vw,16px) 16px}
+  nav.open{display:block}nav ul{flex-direction:column}nav a{padding:14px 12px;font-size:16px}
+}
+@media(max-width:420px){.brand small{display:none}.btn.hbtn{padding:0 12px}.brand svg{width:32px;height:32px}.brand{gap:8px;font-size:15px}.bar{gap:8px}}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 26px;border-radius:6px;font:600 15px Inter,sans-serif;text-decoration:none;border:1px solid transparent;cursor:pointer;color:inherit}
+.btn.red{background:var(--red);color:#fff}.btn.red:hover{background:#b8141a}
+.btn.ghost{border-color:currentColor;background:transparent}
+.btn:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,button:focus-visible,summary:focus-visible,.seg input:focus-visible+span,.pay input:focus-visible+span{outline:3px solid var(--red);outline-offset:2px}
+.row{display:flex;flex-wrap:wrap;gap:12px}
+
+/* hero */
+.hero{background:radial-gradient(120% 90% at 80% 10%,#3a1214 0%,#161011 38%,var(--blk) 70%);color:#F5F5F5;padding-bottom:clamp(16px,3vw,48px)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(20px,4vw,56px);align-items:center}
+.hero .lead{color:#c9d2d6}
+.hero svg{width:100%;height:auto}
+@media(max-width:820px){.hero-grid{grid-template-columns:minmax(0,1fr)}}
+.ray{stroke-dasharray:6 10;animation:flow 1.6s linear infinite}
+@keyframes flow{to{stroke-dashoffset:-32}}
+@media(prefers-reduced-motion:reduce){.ray{animation:none}}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid #ffffff22;margin-top:clamp(24px,4vw,48px)}
+.facts div{padding:18px 16px 4px 0}.facts b{display:block;font-size:13px;font-weight:500;color:#9aa5aa}.facts span{font-size:17px;font-weight:600}
+@media(max-width:600px){.facts{grid-template-columns:minmax(0,1fr)}.facts div{padding:12px 0 0}}
+
+/* generic blocks */
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:24px}
+.card p:last-child{margin:0}
+.icon{width:40px;height:40px;margin-bottom:14px;color:var(--red)}
+.dark{background:var(--blk);color:#F5F5F5;border-bottom:1px solid #ffffff14}.dark .lead,.dark .note{color:#c9d2d6}
+.dark .card{background:#1a1c1d;border-color:#2a2d2f}
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,5vw,72px);align-items:start}
+@media(max-width:760px){.split{grid-template-columns:minmax(0,1fr)}}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.chip{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:13px;font-weight:500;background:var(--card)}
+.dark .chip{background:#1a1c1d;border-color:#2a2d2f}
+
+/* price */
+.price{border:1px solid var(--line);background:var(--card);border-radius:12px;padding:clamp(22px,3vw,36px)}
+.amount{font-size:clamp(44px,7vw,68px);font-weight:700;letter-spacing:-.02em;line-height:1;white-space:nowrap}
+.price ul{padding-left:20px;margin:16px 0}.price li{margin:6px 0}
+.offer{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:16px;margin-top:8px}
+.offer b{white-space:nowrap}
+
+/* steps */
+.steps{list-style:none;padding:0;margin:0;display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr))}
+.steps li{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:24px;position:relative}
+.steps .num{position:absolute;top:20px;right:20px;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-size:14px;font-weight:600;background:var(--blk);color:#fff}
+
+/* explorer */
+.explorer{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(20px,4vw,48px);align-items:start}
+@media(max-width:760px){.explorer{grid-template-columns:minmax(0,1fr)}}
+fieldset{border:0;padding:0;margin:0 0 18px}
+legend{font-weight:600;font-size:14px;margin-bottom:8px;padding:0}
+.seg{display:flex;flex-wrap:wrap;gap:8px}
+.seg label{position:relative;display:block}
+.seg input,.pay input{position:absolute;opacity:0;width:1px;height:1px}
+.seg span{display:flex;align-items:center;min-height:44px;padding:0 16px;border:1px solid var(--line);border-radius:999px;background:var(--card);cursor:pointer;font-size:15px}
+.seg input:checked+span{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.meter{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:24px}
+.meter .lvl{font-size:clamp(32px,5vw,44px);font-weight:700;line-height:1.1;margin:4px 0 14px}
+.track{height:14px;border-radius:999px;background:var(--line);overflow:hidden}
+.fill{height:100%;width:50%;background:linear-gradient(90deg,#f0a07f,var(--red));border-radius:999px;transition:width .4s}
+@media(prefers-reduced-motion:reduce){.fill{transition:none}}
+.scale{display:flex;justify-content:space-between;font-size:13px;color:var(--soft);margin-top:6px}
+
+/* faq + blog */
+details{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;list-style:none;padding:18px 36px 18px 0;font-weight:600;position:relative;min-height:44px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:4px;top:14px;font-size:24px;font-weight:400;color:var(--red)}
+details[open] summary::after{content:"−"}
+details>div{padding:0 0 18px}
+.post{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:0 24px;margin-bottom:16px}
+.post summary{padding-top:22px;padding-bottom:22px}
+.post summary small{display:block;font-weight:400;color:var(--soft);font-size:14px;margin-top:4px}
+.post details{border:0}
+
+/* forms */
+form{display:grid;gap:16px}
+label{font-weight:500;font-size:14px;display:grid;gap:6px}
+input,select,textarea{font:16px Inter,sans-serif;padding:12px 14px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--ink);width:100%;min-height:48px}
+textarea{min-height:140px;resize:vertical}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+@media(max-width:560px){.two{grid-template-columns:minmax(0,1fr)}}
+.check{display:flex;gap:10px;align-items:flex-start;font-weight:400;font-size:15px}
+.check input{width:22px;height:22px;min-height:0;flex:none;margin-top:2px;accent-color:var(--red)}
+.ok{display:none;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--red);border-radius:8px;padding:20px}
+.err{color:var(--red);font-size:14px;min-height:1em;font-weight:500}
+
+/* checkout */
+.checkout{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(20px,4vw,48px);align-items:start}
+@media(max-width:860px){.checkout{grid-template-columns:minmax(0,1fr)}.summary{order:-1}}
+.summary{position:sticky;top:84px}
+@media(max-width:860px){.summary{position:static}}
+.line{display:flex;justify-content:space-between;gap:12px;padding:8px 0}
+.line span:last-child{white-space:nowrap;font-variant-numeric:tabular-nums}
+.line.total{border-top:1px solid var(--line);margin-top:6px;padding-top:14px;font-weight:700;font-size:20px}
+.disc{color:var(--red)}.line[hidden]{display:none}
+.pay{display:grid;gap:10px}
+.pay label{position:relative;display:block}
+.pay span{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 14px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:14px 16px;background:var(--card);cursor:pointer;font-weight:400}
+.pay span svg{width:28px;height:28px;color:var(--soft);grid-row:span 2}
+.pay b{font-size:15px}.pay small{color:var(--soft);font-size:13px}
+.pay input:checked+span{border-color:var(--red);box-shadow:0 0 0 1px var(--red);background:var(--tint)}
+.pay input:checked+span svg{color:var(--red)}
+.secure{display:flex;gap:12px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;font-size:14px}
+.secure svg{flex:none;width:24px;height:24px;color:var(--red)}
+.step-h{display:flex;align-items:center;gap:10px;font-size:18px;font-weight:600;margin:8px 0 4px}
+.step-h i{font-style:normal;width:28px;height:28px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;font-size:14px}
+
+/* policy */
+.policy{max-width:820px}
+.policy h2{font-size:clamp(22px,3vw,28px);margin-top:1.6em}
+.policy ul{padding-left:20px}.policy li{margin:6px 0}
+.quick{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));margin:8px 0 16px}
+.quick div{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px}
+.quick b{display:block;font-size:22px;line-height:1.2;margin-bottom:4px}
+.quick span{font-size:14px;color:var(--soft)}
+
+/* social */
+.socials{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0}
+.socials a{display:inline-flex;align-items:center;gap:8px;min-height:44px;border:1px solid var(--line);border-radius:999px;padding:0 16px;font-size:14px;font-weight:500;text-decoration:none;background:var(--card)}
+.socials a:hover{border-color:var(--red)}
+.socials svg{width:18px;height:18px;color:var(--red)}
+footer .socials a{background:transparent;border-color:#ffffff2a;color:#F5F5F5}
+
+/* pages */
+.page{display:none}.page.on{display:block}
+footer{background:var(--blk);color:#c9d2d6;font-size:14px}
+footer .note{color:#a3adb2}
+footer .wrap{display:grid;gap:24px;grid-template-columns:minmax(0,2fr) repeat(3,minmax(0,1fr))}
+footer a{text-decoration:none;display:inline-block;padding:4px 0}footer a:hover{color:#fff}
+footer ul{list-style:none;padding:0;margin:0}
+@media(max-width:800px){footer .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}footer .wrap>div:first-child{grid-column:1/-1}}
+</style>
+</head>
+<body>
+
+<div class="strip">Academic project concept. Not affiliated with or endorsed by Tesla, Inc.</div>
+
+<header>
+  <div class="bar">
+    <a class="brand" href="#home" aria-label="Sunrise Panels home">
+      <svg width="40" height="40" viewBox="0 0 34 34" aria-hidden="true"><path d="M5 22a12 12 0 0 1 24 0Z" fill="#D71920"/><path d="M2 25h30" stroke="#B9C4C9" stroke-width="2"/><path d="M8 29h18" stroke="#B9C4C9" stroke-width="2" opacity=".55"/></svg>
+      <span>Sunrise Panels<small>Solar for EVs · concept</small></span>
+    </a>
+    <nav id="nav" aria-label="Main">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#product">Product</a></li>
+        <li><a href="#sustainability">Sustainability</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="btn red hbtn" href="#order">Pre-order</a>
+    <button class="menu" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+<!-- HOME -->
+<section class="page" id="p-home" data-title="Sunrise Panels | Solar Panels for Electric Vehicles (Concept)" data-desc="A proposed concept for EV solar charging: solar car panels that aim to give electric vehicle drivers another source of clean energy. $8,999 installed.">
+  <div class="band hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <h1>Charge Anywhere. Drive Everywhere.</h1>
+          <p class="lead">Discover Sunrise Panels, a new concept designed to bring solar energy and electric transportation together. Explore the possibility of generating additional clean energy while supporting a more sustainable driving experience.</p>
+          <div class="row" style="margin:28px 0 8px"><a class="btn red" href="#product">Explore the Product</a><a class="btn ghost" href="#order">Pre-order</a></div>
+        </div>
+        <svg viewBox="0 0 800 440" role="img" aria-label="Electric vehicle solar panels: illustration of an EV with solar car panels on its roof under a rising sun">
+          <defs>
+            <radialGradient id="sun" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#ff6b4a"/><stop offset=".6" stop-color="#D71920"/><stop offset="1" stop-color="#D71920" stop-opacity="0"/></radialGradient>
+            <linearGradient id="body" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e9eef0"/><stop offset=".55" stop-color="#B9C4C9"/><stop offset="1" stop-color="#6d777c"/></linearGradient>
+            <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2b3338"/><stop offset="1" stop-color="#0d1114"/></linearGradient>
+            <pattern id="cells" width="22" height="14" patternUnits="userSpaceOnUse"><rect width="22" height="14" fill="url(#glass)"/><path d="M22 0V14M0 14H22" stroke="#5b7684" stroke-width="1.2"/></pattern>
+            <clipPath id="roof"><path d="M292 246Q350 198 424 194Q510 192 572 242Z"/></clipPath>
+          </defs>
+          <circle cx="640" cy="118" r="120" fill="url(#sun)" opacity=".55"/>
+          <circle cx="640" cy="118" r="54" fill="#D71920"/>
+          <g stroke="#B9C4C9" stroke-width="1.5" fill="none" opacity=".35">
+            <path d="M20 340V170h110v170M60 170V120h120v220M210 340V200h90v140M560 340V230h70v110M660 340V180h120v160"/>
+            <path d="M20 210h110M20 250h110M20 290h110M680 220h80M680 260h80M680 300h80"/>
+          </g>
+          <g stroke="#ff8a6e" stroke-width="2.5" stroke-linecap="round">
+            <path class="ray" d="M600 160L520 214"/><path class="ray" d="M590 140L440 196"/><path class="ray" d="M612 170L560 226" style="animation-delay:-.5s"/><path class="ray" d="M585 128L360 210" style="animation-delay:-1s"/>
+          </g>
+          <ellipse cx="402" cy="378" rx="300" ry="16" fill="#000" opacity=".55"/>
+          <path d="M0 372H800" stroke="#B9C4C9" stroke-width="1" opacity=".25"/>
+          <path d="M120 330Q118 290 160 276L262 254Q334 192 424 188Q526 186 596 240L660 260Q690 270 686 306L684 330Q684 344 670 344H610A46 46 0 0 0 518 344H298A46 46 0 0 0 206 344H134Q120 344 120 330Z" fill="url(#body)"/>
+          <path d="M262 254Q334 192 424 188Q526 186 596 240" fill="none" stroke="#fff" stroke-width="2" opacity=".7"/>
+          <rect x="280" y="180" width="310" height="80" fill="url(#cells)" clip-path="url(#roof)"/>
+          <path d="M292 246Q350 198 424 194Q510 192 572 242Z" fill="none" stroke="#D71920" stroke-width="2"/>
+          <path d="M150 300H676" stroke="#6d777c" stroke-width="1.5" opacity=".6"/>
+          <path d="M640 276h34" stroke="#D71920" stroke-width="5" stroke-linecap="round"/>
+          <path d="M128 286h22" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".8"/>
+          <g><circle cx="252" cy="344" r="40" fill="#151718"/><circle cx="252" cy="344" r="22" fill="#3a4246" stroke="#B9C4C9" stroke-width="3"/><circle cx="564" cy="344" r="40" fill="#151718"/><circle cx="564" cy="344" r="22" fill="#3a4246" stroke="#B9C4C9" stroke-width="3"/></g>
+        </svg>
+      </div>
+      <div class="facts">
+        <div><b>What it is</b><span>A solar panel system for EVs</span></div>
+        <div><b>Who it's for</b><span>Tesla and other EV drivers</span></div>
+        <div><b>Proposed price</b><span class="nowrap">$8,999, installed</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="band">
+    <div class="wrap split">
+      <div><div class="kicker">The concept</div><h2>A new approach to electric vehicle charging</h2></div>
+      <div>
+        <p class="lead">Sunrise Panels introduces a new approach to electric vehicle charging by combining solar technology with modern transportation.</p>
+        <p>Designed with convenience and sustainability in mind, this proposed solution aims to give EV drivers another way to support their vehicle's energy needs.</p>
+        <div class="row"><a class="btn red" href="#product">Explore the Product</a><a class="btn ghost" href="#how-it-works">How it works</a></div>
+      </div>
+    </div>
+  </div>
+  <div class="band dark">
+    <div class="wrap">
+      <h2>Why solar on an EV?</h2>
+      <div class="grid" style="margin-top:28px" id="benefits-home"></div>
+    </div>
+  </div>
+  <div class="band">
+    <div class="wrap">
+      <div class="kicker">Made for</div>
+      <h2>Drivers who want more freedom from the plug</h2>
+      <div class="grid" style="margin-top:24px" id="audience"></div>
+    </div>
+  </div>
+  <div class="band tight">
+    <div class="wrap split">
+      <div><h2>Proposed price: <span class="nowrap">$8,999</span></h2><p class="lead">Includes professional installation and a one-year warranty. Current Tesla owners and app customers get 10% off a pre-order.</p>
+        <div class="chips" aria-label="Accepted payment methods" id="paychips-home"></div>
+      </div>
+      <div class="row" style="align-self:center"><a class="btn red" href="#order">Pre-order now</a><a class="btn ghost" href="#returns">Return policy</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="page" id="p-about" data-title="About Us | Sunrise Panels" data-desc="The mission, vision and purpose behind Sunrise Panels, a sustainable vehicle technology concept based in Canada.">
+  <div class="band dark"><div class="wrap"><div class="kicker">About us</div><h1>Powering electric driving with the sun</h1><p class="lead">Sunrise Panels is a proposed solar panel system for Tesla and other electric vehicles, in the automotive technology and renewable energy industry.</p></div></div>
+  <div class="band"><div class="wrap grid" id="mvp"></div></div>
+  <div class="band tight"><div class="wrap split">
+    <div><h2>The company concept</h2></div>
+    <div>
+      <p>The product uses solar energy to provide additional power that may support vehicle charging and reduce dependence on traditional charging stations. It focuses on three things: convenience, sustainability and energy independence.</p>
+      <p>What sets it apart is the focus on combining solar technology with electric vehicles specifically, with an emphasis on modern design and the EV experience.</p>
+      <p><b>Location:</b> Canada. We sell online first, through our website and app, with showrooms proposed.</p>
+      <p class="note">This website presents a college project. Sunrise Panels is not manufactured, approved or sold by Tesla, Inc.</p>
+    </div>
+  </div></div>
+  <div class="band dark"><div class="wrap split">
+    <div><h2>Who it's for</h2></div>
+    <div><p class="lead">EV owners and people thinking about buying one, especially Tesla owners.</p><p>We have in mind drivers who care about renewable energy, technology and automotive innovation: regular commuters, frequent travellers and anyone who wants more flexibility in how they charge.</p></div>
+  </div></div>
+  <div class="band"><div class="wrap split">
+    <div><h2>Built with the right partners</h2></div>
+    <div><p>The product would rely on photovoltaic solar cells, protective glass, wiring and connectors, mounting structures, electronic controllers and power-management parts, all made for outdoor automotive use.</p><p>We'd work with suppliers experienced in solar technology, automotive components, durability and quality control. No suppliers have been confirmed yet.</p></div>
+  </div></div>
+</section>
+
+<!-- PRODUCT -->
+<section class="page" id="p-product" data-title="Product | Electric Vehicle Solar Panels Concept | Sunrise Panels" data-desc="Proposed features, benefits and pricing for the Sunrise Panels electric vehicle solar panels concept: $8,999 with installation and a one-year warranty.">
+  <div class="band dark"><div class="wrap"><div class="kicker">Product</div><h1>Electric vehicle solar panels, designed as part of the car</h1><p class="lead">A proposed solar panel system for Tesla and other EVs that generates additional clean energy to support battery charging.</p><div class="row" style="margin-top:20px"><a class="btn red" href="#order">Pre-order</a><a class="btn ghost" href="#how-it-works">How it works</a></div></div></div>
+  <div class="band"><div class="wrap">
+    <h2>Proposed benefits</h2>
+    <div class="grid" style="margin-top:24px" id="benefits"></div>
+  </div></div>
+  <div class="band tight"><div class="wrap split">
+    <div class="price">
+      <div class="kicker">Proposed price</div>
+      <div class="amount">$8,999</div>
+      <p class="note" style="margin-top:6px">per unit</p>
+      <ul><li>Professional installation included</li><li>One-year warranty</li><li>Cancel any time before installation for a full refund</li></ul>
+      <div class="offer"><span>Pre-order price for current Tesla owners and app customers (10% off)</span><b>$8,099.10</b></div>
+      <div class="chips" aria-label="Accepted payment methods" id="paychips-product"></div>
+      <div class="row" style="margin-top:12px"><a class="btn red" href="#order">Pre-order now</a><a class="btn ghost" href="#returns">Return policy</a></div>
+    </div>
+    <div>
+      <h3>About performance figures</h3>
+      <p>Verified charging speeds, range increases, compatibility, installation specifications and performance figures have not been established yet. Solar output depends on panel area, sunlight, weather and how much energy the vehicle needs.</p>
+      <p>We won't publish numbers until the final design has been built and tested.</p>
+      <h3 style="margin-top:28px">Where you could find it (proposed)</h3>
+      <ul id="channels" style="padding-left:20px"></ul>
+    </div>
+  </div></div>
+  <div class="band dark"><div class="wrap split">
+    <div><h2>Frequently asked questions</h2><p class="lead">Quick answers about the concept, payments and returns.</p></div>
+    <div id="faq"></div>
+  </div></div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="page" id="p-how-it-works" data-title="How It Works | EV Solar Charging Explained | Sunrise Panels" data-desc="A simple explanation of how solar car panels turn sunlight into electricity that can support electric vehicle charging, plus an interactive sunlight explorer.">
+  <div class="band dark"><div class="wrap"><div class="kicker">How it works</div><h1>From sunlight to your battery, in plain terms</h1><p class="lead">Solar panels turn light into electricity. Here's how the concept would put that energy to work in an electric vehicle.</p></div></div>
+  <div class="band"><div class="wrap"><ol class="steps" id="steps"></ol></div></div>
+  <div class="band tight"><div class="wrap">
+    <h2>Sunlight explorer</h2>
+    <p class="lead">Where and when you park changes how much light reaches the panels. Try a few combinations.</p>
+    <div class="explorer" style="margin-top:24px">
+      <div id="explorer-controls">
+        <fieldset><legend>Weather</legend><div class="seg" data-k="w"></div></fieldset>
+        <fieldset><legend>Season</legend><div class="seg" data-k="s"></div></fieldset>
+        <fieldset><legend>Where you park</legend><div class="seg" data-k="p"></div></fieldset>
+      </div>
+      <div class="meter" aria-live="polite">
+        <div class="note">Sunlight reaching the panels</div>
+        <div class="lvl" id="lvl">High</div>
+        <div class="track"><div class="fill" id="fill"></div></div>
+        <div class="scale"><span>None</span><span>Most</span></div>
+        <p id="tip" style="margin:18px 0 0"></p>
+      </div>
+    </div>
+    <p class="note" style="margin-top:14px">For illustration only. It compares conditions and doesn't estimate actual energy output, charging speed or range.</p>
+  </div></div>
+  <div class="band dark"><div class="wrap split">
+    <div><h2>Parked or driving?</h2></div>
+    <div>
+      <p>The concept includes generating solar energy while the vehicle is parked. Generating energy while driving would depend on whether the final design supports it.</p>
+      <p>Either way, solar is meant to add to your normal charging, not replace it. How much it adds depends on panel area, how sunny it is, the weather and the vehicle's own energy use.</p>
+      <p class="note">No charging speeds or range figures are claimed here. They'll only be shared once the system has been designed and tested.</p>
+    </div>
+  </div></div>
+</section>
+
+<!-- SUSTAINABILITY -->
+<section class="page" id="p-sustainability" data-title="Sustainability | Sustainable Vehicle Technology | Sunrise Panels" data-desc="How Sunrise Panels supports renewable energy in transportation and sustainable vehicle technology.">
+  <div class="band dark"><div class="wrap"><div class="kicker">Sustainability</div><h1>Cleaner energy for the way we move</h1><p class="lead">Electric vehicles are cleaner when the electricity behind them is clean. Solar on the car itself brings the energy source one step closer.</p></div></div>
+  <div class="band"><div class="wrap"><div class="grid" id="goals"></div></div></div>
+  <div class="band tight"><div class="wrap split">
+    <div><h2>Built to last outdoors</h2></div>
+    <div><p>A longer-lasting product means less waste. We'd choose protective glass and materials made for outdoor automotive use, and suppliers with a track record in durability and quality control.</p><p>Professional installation by qualified technicians helps the system perform well and last, and the one-year warranty covers defects.</p></div>
+  </div></div>
+</section>
+
+<!-- BLOG -->
+<section class="page" id="p-blog" data-title="Blog | EV Solar Charging and Sustainable Transportation | Sunrise Panels" data-desc="Articles about electric vehicles, EV solar charging, solar-powered electric cars and sustainable transportation.">
+  <div class="band dark"><div class="wrap"><div class="kicker">Blog</div><h1>Notes on EVs, solar and getting around cleanly</h1><p class="lead">Short reads on solar charging, electric vehicles and sustainable transportation.</p></div></div>
+  <div class="band"><div class="wrap" style="max-width:860px" id="posts"></div></div>
+</section>
+
+<!-- CONTACT -->
+<section class="page" id="p-contact" data-title="Contact Us | Sunrise Panels" data-desc="Contact the Sunrise Panels team with questions, feedback, returns or pre-order interest, and follow us on Instagram, TikTok and YouTube.">
+  <div class="band dark"><div class="wrap"><div class="kicker">Contact us</div><h1>Questions? We'd like to hear them.</h1><p class="lead">Ask about the concept, your order or a return, or just share feedback.</p></div></div>
+  <div class="band"><div class="wrap split">
+    <div>
+      <form id="form" novalidate>
+        <div class="two">
+          <label>Name<input id="f-name" name="name" autocomplete="name" required></label>
+          <label>Email<input id="f-email" name="email" type="email" autocomplete="email" required></label>
+        </div>
+        <label>Topic<select id="f-topic" name="topic"><option>General question</option><option>Pre-order or payment</option><option>Return or refund</option><option>Feedback</option><option>Solar Drive Experience</option><option>Partnership</option></select></label>
+        <label>Message<textarea id="f-msg" name="message" required></textarea></label>
+        <div class="err" id="f-err" role="alert"></div>
+        <div><button class="btn red" type="submit">Send message</button></div>
+      </form>
+      <div class="ok" id="ok" role="status"></div>
+    </div>
+    <div>
+      <h3>Where we are</h3>
+      <p>Based in Canada. We're online first, through our website and app, with showrooms and service centres proposed.</p>
+      <h3 style="margin-top:28px">Follow us</h3>
+      <div class="socials" id="socials-contact"></div>
+      <h3 style="margin-top:28px">Solar Drive Experience</h3>
+      <p>We're planning hands-on demonstrations so you can see the concept up close. Pick "Solar Drive Experience" in the form to hear about dates.</p>
+      <p><a href="#product">Read the FAQ</a> · <a href="#returns">Return policy</a></p>
+    </div>
+  </div></div>
+  <div class="band dark"><div class="wrap">
+    <h2>What you'll find on our channels</h2>
+    <p class="lead">We post three to four times a week. That's often enough to keep you up to date without filling your feed.</p>
+    <div class="grid" style="margin-top:24px" id="channels-social"></div>
+    <p style="margin-top:24px">On every channel we answer questions, share customer feedback, run polls and post updates. We keep the tone friendly, knowledgeable and honest about what's proven and what's still a concept.</p>
+  </div></div>
+</section>
+
+<!-- ORDER / CHECKOUT -->
+<section class="page" id="p-order" data-title="Pre-order | Secure Checkout | Sunrise Panels" data-desc="Pre-order Sunrise Panels for $8,999 with installation. Pay by credit card, debit, PayPal, Apple Pay or Google Pay. 10% off for Tesla owners.">
+  <div class="band dark"><div class="wrap"><div class="kicker">Pre-order</div><h1>Reserve your Sunrise Panels</h1><p class="lead">Installation and a one-year warranty are included. You can cancel any time before installation for a full refund.</p></div></div>
+  <div class="band"><div class="wrap checkout">
+    <div>
+      <form id="order" novalidate>
+        <div class="step-h"><i>1</i>Your details</div>
+        <div class="two">
+          <label>Full name<input id="o-name" autocomplete="name" required></label>
+          <label>Email<input id="o-email" type="email" autocomplete="email" required></label>
+        </div>
+        <div class="two">
+          <label>Vehicle<select id="o-car"><option value="">Choose your vehicle</option><option>Tesla Model 3</option><option>Tesla Model Y</option><option>Tesla Model S</option><option>Tesla Model X</option><option>Other electric vehicle</option></select></label>
+          <label>Installation city<input id="o-city" autocomplete="address-level2" required></label>
+        </div>
+        <label class="check"><input type="checkbox" id="o-owner"><span>I'm a current Tesla owner. Apply the 10% pre-order discount.<br><small class="note">We'll confirm ownership before installation. Buying in our app? The discount applies there too.</small></span></label>
+
+        <div class="step-h" style="margin-top:12px"><i>2</i>Payment method</div>
+        <div class="pay" id="pay" role="radiogroup" aria-label="Payment method"></div>
+        <div class="secure"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3" fill="none" stroke="currentColor" stroke-width="2"/></svg><div><b>Secure checkout.</b> Payments are handled by a PCI DSS-compliant payment provider over an encrypted (HTTPS) connection. You enter your card details on the provider's secure page, and we never store them.</div></div>
+
+        <div class="step-h" style="margin-top:12px"><i>3</i>Review and pay</div>
+        <label class="check"><input type="checkbox" id="o-agree"><span>I've read and agree to the <a href="#returns">return and refund policy</a>.</span></label>
+        <div class="err" id="o-err" role="alert"></div>
+        <div><button class="btn red" type="submit" id="o-btn">Continue to secure payment</button></div>
+        <p class="note">Demo checkout for the project concept. No payment is taken and no card details are collected on this site.</p>
+      </form>
+      <div class="ok" id="o-ok" role="status"></div>
+    </div>
+    <aside class="summary price" aria-label="Order summary">
+      <h3>Order summary</h3>
+      <div class="line"><span>Sunrise Panels × 1</span><span>$8,999.00</span></div>
+      <div class="line"><span>Professional installation</span><span>Included</span></div>
+      <div class="line"><span>One-year warranty</span><span>Included</span></div>
+      <div class="line disc" id="disc-line" hidden><span>Tesla owner pre-order (10%)</span><span>−$899.90</span></div>
+      <div class="line total"><span>Total</span><span id="total">$8,999.00</span></div>
+      <p class="note" style="margin:8px 0 0">Applicable taxes are calculated at payment. Cancel any time before installation for a full refund.</p>
+      <div class="chips" id="paychips-order"></div>
+    </aside>
+  </div></div>
+</section>
+
+<!-- RETURNS -->
+<section class="page" id="p-returns" data-title="Return and Refund Policy | Sunrise Panels" data-desc="Return, cancellation and refund policy for Sunrise Panels pre-orders and installations, including the one-year warranty.">
+  <div class="band dark"><div class="wrap"><div class="kicker">Customer care</div><h1>Return and refund policy</h1><p class="lead">The short version: cancel any time before installation, return within 30 days after it, and get your money back the way you paid.</p></div></div>
+  <div class="band"><div class="wrap policy">
+    <div class="quick">
+      <div><b>Before installation</b><span>Cancel any time for a full refund</span></div>
+      <div><b>30 days</b><span>To return after installation</span></div>
+      <div><b>10 business days</b><span>To process your refund</span></div>
+      <div><b>1 year</b><span>Warranty on defects</span></div>
+    </div>
+
+    <h2>Cancelling a pre-order</h2>
+    <p>You can cancel your pre-order at any time before your installation appointment. We'll refund the full amount you paid, including any discount-adjusted price, to your original payment method.</p>
+
+    <h2>Returns after installation</h2>
+    <p>If you change your mind, you can request a return within 30 days of your installation date. To qualify:</p>
+    <ul>
+      <li>The panels must be undamaged and free of modifications.</li>
+      <li>Removal must be done by one of our installation partners. We'll book the appointment for you and restore the vehicle surface where the panels were mounted.</li>
+      <li>Your order reference or proof of purchase is required.</li>
+    </ul>
+    <p>Once the panels have been removed and inspected, we refund the full purchase price, including installation.</p>
+
+    <h2>What we can't accept for return</h2>
+    <ul>
+      <li>Panels damaged by an accident, misuse or improper cleaning</li>
+      <li>Systems installed, moved or repaired by someone other than an approved technician</li>
+      <li>Return requests made more than 30 days after installation (warranty coverage still applies)</li>
+    </ul>
+
+    <h2>Refunds</h2>
+    <p>Refunds go back to your original payment method: credit or debit card, PayPal, Apple Pay or Google Pay. We process them within 10 business days of cancellation or removal. Your bank or provider may take a few extra days to show the refund.</p>
+
+    <h2>Defects and warranty</h2>
+    <p>Every system includes a one-year warranty from the installation date covering defects in materials and workmanship. If something isn't working as it should, contact us. We'll arrange an inspection and repair or replace the affected parts at no cost to you.</p>
+
+    <h2>How to start a return or cancellation</h2>
+    <ol>
+      <li>Send us a message through the <a href="#contact">contact form</a> and choose "Return or refund".</li>
+      <li>Include your name, order reference and installation city.</li>
+      <li>We'll reply within two business days with next steps and, for returns, a removal appointment.</li>
+    </ol>
+    <p class="note" style="margin-top:28px">Proposed policy for an academic project concept. No products are currently sold.</p>
+  </div></div>
+</section>
+</main>
+
+<footer class="band">
+  <div class="wrap">
+    <div>
+      <a class="brand" href="#home" style="color:#F5F5F5"><svg width="36" height="36" viewBox="0 0 34 34" aria-hidden="true"><path d="M5 22a12 12 0 0 1 24 0Z" fill="#D71920"/><path d="M2 25h30" stroke="#B9C4C9" stroke-width="2"/></svg><span>Sunrise Panels</span></a>
+      <p style="margin-top:12px">Charge Anywhere. Drive Everywhere.</p>
+      <div class="socials" id="socials-footer"></div>
+      <p class="note">Sunrise Panels is a proposed academic product concept based in Canada. It is not affiliated with, approved or endorsed by Tesla, Inc. Retail and showroom channels are proposals only. All prices are proposed.</p>
+    </div>
+    <div><b style="color:#fff">Explore</b><ul><li><a href="#product">Product</a></li><li><a href="#how-it-works">How it works</a></li><li><a href="#sustainability">Sustainability</a></li><li><a href="#blog">Blog</a></li></ul></div>
+    <div><b style="color:#fff">Shop</b><ul><li><a href="#order">Pre-order</a></li><li><a href="#returns">Returns and refunds</a></li><li><a href="#product">FAQ</a></li></ul></div>
+    <div><b style="color:#fff">Company</b><ul><li><a href="#about">About</a></li><li><a href="#contact">Contact</a></li></ul></div>
+  </div>
+</footer>
+
+<script>
+{
+const $=id=>document.getElementById(id);
+const I={
+  sun:'<circle cx="20" cy="20" r="7" fill="currentColor"/><path d="M20 3v5M20 32v5M3 20h5M32 20h5M8 8l3.5 3.5M28.5 28.5L32 32M8 32l3.5-3.5M28.5 11.5L32 8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>',
+  plug:'<path d="M14 4v8M26 4v8M10 12h20v6a10 10 0 0 1-20 0zM20 28v8" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round"/>',
+  coin:'<circle cx="20" cy="20" r="15" stroke="currentColor" stroke-width="2.5" fill="none"/><path d="M24 14h-6a3 3 0 0 0 0 6h4a3 3 0 0 1 0 6h-7M20 10v20" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round"/>',
+  leaf:'<path d="M8 32C8 16 18 8 34 6c-1 16-9 26-24 26zM8 32l14-14" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>',
+  bolt:'<path d="M22 3L8 23h11l-2 14 15-21H21z" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linejoin="round"/>',
+  target:'<circle cx="20" cy="20" r="15" stroke="currentColor" stroke-width="2.5" fill="none"/><circle cx="20" cy="20" r="8" stroke="currentColor" stroke-width="2.5" fill="none"/><circle cx="20" cy="20" r="2.5" fill="currentColor"/>',
+  eye:'<path d="M3 20s6-11 17-11 17 11 17 11-6 11-17 11S3 20 3 20z" stroke="currentColor" stroke-width="2.5" fill="none"/><circle cx="20" cy="20" r="5" fill="currentColor"/>',
+  heart:'<path d="M20 34S5 25 5 14a8 8 0 0 1 15-4 8 8 0 0 1 15 4c0 11-15 20-15 20z" stroke="currentColor" stroke-width="2.5" fill="none"/>',
+  panel:'<path d="M6 28L11 10h18l5 18z" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linejoin="round"/><path d="M8.5 19h23M15 10l-2 18M25 10l2 18M20 28v6M14 34h12" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round"/>',
+  chip:'<rect x="10" y="10" width="20" height="20" rx="3" stroke="currentColor" stroke-width="2.5" fill="none"/><path d="M15 4v6M25 4v6M15 30v6M25 30v6M4 15h6M4 25h6M30 15h6M30 25h6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M21 14l-4 6h6l-4 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"/>',
+  battery:'<rect x="4" y="11" width="28" height="18" rx="3" stroke="currentColor" stroke-width="2.5" fill="none"/><path d="M35 17v6" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><rect x="8" y="15" width="14" height="10" rx="1" fill="currentColor"/>',
+  road:'<path d="M13 4L6 36M27 4l7 32M20 6v5M20 17v6M20 29v5" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round"/>',
+  pin:'<path d="M20 36s-11-11-11-20a11 11 0 0 1 22 0c0 9-11 20-11 20z" stroke="currentColor" stroke-width="2.5" fill="none"/><circle cx="20" cy="16" r="4" fill="currentColor"/>',
+  car:'<path d="M5 26v-5l4-8h22l4 8v5zM5 26v4h5v-4M30 26v4h5v-4" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linejoin="round"/><circle cx="12" cy="21" r="2" fill="currentColor"/><circle cx="28" cy="21" r="2" fill="currentColor"/>',
+  camera:'<rect x="4" y="10" width="32" height="24" rx="6" stroke="currentColor" stroke-width="2.5" fill="none"/><circle cx="20" cy="22" r="6" stroke="currentColor" stroke-width="2.5" fill="none"/><path d="M14 10l2-4h8l2 4" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linejoin="round"/>',
+  note:'<path d="M16 30V8l16-3v21" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linejoin="round"/><circle cx="11" cy="30" r="5" stroke="currentColor" stroke-width="2.5" fill="none"/><circle cx="27" cy="26" r="5" stroke="currentColor" stroke-width="2.5" fill="none"/>',
+  play:'<rect x="3" y="8" width="34" height="24" rx="7" stroke="currentColor" stroke-width="2.5" fill="none"/><path d="M17 14v12l10-6z" fill="currentColor"/>',
+  card:'<rect x="3" y="8" width="34" height="24" rx="4" stroke="currentColor" stroke-width="2.5" fill="none"/><path d="M3 15h34M9 25h8" stroke="currentColor" stroke-width="2.5"/>',
+  wallet:'<path d="M5 12h28a2 2 0 0 1 2 2v18a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2zM5 12l22-6v6" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linejoin="round"/><circle cx="28" cy="23" r="2.5" fill="currentColor"/>',
+  phone:'<rect x="11" y="3" width="18" height="34" rx="4" stroke="currentColor" stroke-width="2.5" fill="none"/><path d="M17 31h6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>',
+  bank:'<path d="M4 15L20 5l16 10zM8 18v12M15 18v12M25 18v12M32 18v12M4 34h32" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linejoin="round" stroke-linecap="round"/>'
+};
+const ic=(k,c='icon')=>`<svg class="${c}" viewBox="0 0 40 40" aria-hidden="true">${I[k]}</svg>`;
+const card=(k,t,p)=>`<div class="card">${ic(k)}<h3>${t}</h3><p>${p}</p></div>`;
+
+const benefits=[
+  ['sun','Renewable energy','Uses sunlight as an extra source of energy for your vehicle.'],
+  ['plug','Charging convenience','Aims to generate extra energy while parked, and while driving if the final design supports it.'],
+  ['coin','Potential cost savings','May reduce the electricity you need to buy for charging.'],
+  ['leaf','Sustainability','Supports more renewable energy in everyday transportation.'],
+  ['bolt','Energy independence','Gives you another potential source of vehicle energy beyond the plug.']
+];
+$('benefits').innerHTML=benefits.map(b=>card(...b)).join('');
+$('benefits-home').innerHTML=benefits.slice(0,4).map(b=>card(...b)).join('');
+
+$('audience').innerHTML=[
+  ['car','Tesla owners','Designed with Tesla drivers in mind, with 10% off when you pre-order as a current owner.'],
+  ['road','Daily commuters','Parked outside at work all day? That time in the sun could top up your battery.'],
+  ['pin','Frequent travellers','Another energy source when you\'re far from your usual charger.'],
+  ['leaf','Clean-energy fans','For drivers who want their EV powered by renewable energy wherever possible.']
+].map(b=>card(...b)).join('');
+
+$('mvp').innerHTML=[
+  ['target','Mission','To provide Tesla and other EV drivers with an innovative solar panel solution that helps charge vehicles using clean energy, reduces reliance on plug-in charging, and makes electric driving more convenient and sustainable.'],
+  ['eye','Vision','To create a future where electric vehicles are powered more efficiently through integrated solar technology, making transportation cleaner, smarter and more energy independent.'],
+  ['heart','Purpose','To improve charging convenience for EV users by generating additional energy, supporting battery charging, reducing charging costs and lowering environmental impact.']
+].map(b=>card(...b)).join('');
+
+$('channels').innerHTML=[
+  '<b>Company website and mobile app:</b> the main place for product info and pre-orders.',
+  '<b>Showrooms and service centres:</b> talk to knowledgeable staff, subject to approval and availability.',
+  '<b>Retail partners:</b> potential partners such as Best Buy and Home Depot. No agreements are in place.',
+  '<b>Installation partners:</b> qualified technicians for installation and support.'
+].map(c=>`<li style="margin:8px 0">${c}</li>`).join('');
+
+/* payment methods */
+const PAY=[
+  ['card','Credit card','Visa, Mastercard, American Express'],
+  ['bank','Debit card','Interac Debit, Visa Debit, Debit Mastercard'],
+  ['wallet','PayPal','Pay with your PayPal balance, bank or card'],
+  ['phone','Apple Pay or Google Pay','Pay with your phone or watch']
+];
+const chips=['Visa','Mastercard','American Express','Interac Debit','PayPal','Apple Pay','Google Pay'].map(c=>`<span class="chip">${c}</span>`).join('');
+['paychips-home','paychips-product','paychips-order'].forEach(id=>$(id).innerHTML=chips);
+$('pay').innerHTML=PAY.map(([k,t,s],i)=>`<label><input type="radio" name="pay" value="${t}"${i?'':' checked'}><span>${ic(k,'')}<b>${t}</b><small>${s}</small></span></label>`).join('');
+
+const faq=[
+  ['Does the product charge a vehicle using sunlight?','The concept uses solar panels to generate additional electrical energy that can support vehicle charging. Actual performance depends on the final technical design.'],
+  ['Can the panels work while the vehicle is parked?','The proposed concept includes solar energy generation while parked. The final system would need to be designed and tested to confirm its capabilities.'],
+  ['How much does the product cost?','The proposed project price is $8,999, including professional installation and a one-year warranty. Current Tesla owners and customers buying through the app would get a 10% pre-order discount.'],
+  ['Is installation included?','Yes. The proposed price includes professional installation.'],
+  ['What payment methods do you accept?','Credit cards (Visa, Mastercard, American Express), debit cards (including Interac Debit), PayPal, Apple Pay and Google Pay. All payments go through a secure, PCI DSS-compliant provider.'],
+  ['What if I change my mind?','Cancel any time before installation for a full refund, or request a return within 30 days after installation. See the <a href="#returns">return and refund policy</a> for details.'],
+  ['Is the product available for purchase?','This is a proposed academic product concept, not a confirmed commercial product. The pre-order checkout on this site is a demo and takes no payment.']
+];
+$('faq').innerHTML=faq.map(([q,a])=>`<details><summary>${q}</summary><div><p>${a}</p></div></details>`).join('');
+
+$('steps').innerHTML=[
+  ['sun','Sunlight reaches the panels','Photovoltaic solar cells on the vehicle are exposed to daylight, whether the car is parked outside or on the road.'],
+  ['panel','Cells make electricity','The cells convert light into direct-current (DC) electricity. More sun and more panel area means more energy.'],
+  ['chip','A controller manages it','Electronic controllers and power-management parts regulate that energy so the vehicle can use it safely.'],
+  ['battery','Energy supports the battery','The extra energy goes toward supporting the battery, adding to the charging you already do.']
+].map(([k,t,p],i)=>`<li><span class="num">${i+1}</span>${ic(k)}<h3>${t}</h3><p style="margin:0">${p}</p></li>`).join('');
+
+/* sunlight explorer: relative comparison only */
+const EX={
+  w:[['sun','Sunny',1],['part','Partly cloudy',.6],['over','Overcast',.25]],
+  s:[['sum','Summer',1],['mid','Spring or fall',.75],['win','Winter',.45]],
+  p:[['open','Open lot',1],['shade','Partial shade',.5],['gar','Covered garage',0]]
+};
+document.querySelectorAll('.seg').forEach(seg=>{const k=seg.dataset.k;seg.innerHTML=EX[k].map(([v,t],i)=>`<label><input type="radio" name="ex-${k}" value="${v}"${i?'':' checked'}><span>${t}</span></label>`).join('')});
+const exUpdate=()=>{
+  const g=k=>{const v=document.querySelector(`input[name=ex-${k}]:checked`).value;return EX[k].find(o=>o[0]===v)};
+  const w=g('w'),s=g('s'),p=g('p'),r=w[2]*s[2]*p[2];
+  const lvl=r>=.7?'High':r>=.4?'Moderate':r>=.15?'Low':r>0?'Very low':'None';
+  $('lvl').textContent=lvl;$('fill').style.width=Math.max(r*100,2)+'%';
+  $('tip').textContent=p[0]==='gar'?'Panels need light. In a covered garage they won\'t generate energy, so plan to plug in as usual.'
+    :r>=.7?'Great conditions. This is when solar adds the most to your normal charging.'
+    :w[0]==='over'?'Panels still work on cloudy days, just with less light. Your regular charging does more of the work.'
+    :s[0]==='win'?'Shorter days and a lower sun mean less light in winter. Parking in the open helps.'
+    :p[0]==='shade'?'Shade cuts the light reaching the panels. An open spot makes a real difference.'
+    :'Decent conditions. Solar tops up your battery while your regular charging does the rest.';
+};
+$('explorer-controls').addEventListener('change',exUpdate);exUpdate();
+
+$('goals').innerHTML=[
+  ['sun','More renewable energy in transportation','Sunlight is a renewable source. Using it on the vehicle adds clean energy to every drive.'],
+  ['plug','Less reliance on the grid','Extra solar energy can reduce how often you need to plug in, depending on conditions.'],
+  ['leaf','Lower environmental impact','Less purchased electricity for charging can mean a smaller footprint, especially where the grid relies on fossil fuels.'],
+  ['bolt','Smarter, more independent energy','Pairing solar and EVs moves transportation toward cleaner, more self-sufficient energy.']
+].map(b=>card(...b)).join('');
+
+/* social */
+const SOCIAL=[
+  ['camera','Instagram','https://www.instagram.com/sunrisesolarconcept','Product photos, announcements, promotions and customer feedback. A visual product belongs on a visual platform.'],
+  ['note','TikTok','https://www.tiktok.com/@sunrisesolarconcept','Short educational videos that explain solar charging in under a minute and reach EV-curious viewers.'],
+  ['play','YouTube','https://www.youtube.com/@sunrisesolarconcept','Longer demonstrations and product presentations for drivers researching a big purchase.']
+];
+const sl=SOCIAL.map(([k,n,u])=>`<a href="${u}" target="_blank" rel="noopener" aria-label="${n} (opens in a new tab)">${ic(k,'')}${n}</a>`).join('');
+$('socials-contact').innerHTML=sl;$('socials-footer').innerHTML=sl;
+$('channels-social').innerHTML=SOCIAL.map(([k,n,u,d])=>`<div class="card">${ic(k)}<h3>${n}</h3><p>${d}</p></div>`).join('');
+
+const posts=[
+  ['Can solar panels really help charge an electric vehicle?','4 min read · Solar charging',
+   ['Solar panels for electric vehicles are getting a lot of attention, and it\'s fair to ask what they can realistically do. A solar panel produces electricity whenever light hits it. Mount panels on a car and that electricity can, in principle, go toward the battery.',
+    'The catch is surface area. A car roof is small compared to the solar arrays on a house, so vehicle-mounted solar is best thought of as a top-up, not a replacement for plugging in. How much it adds depends on the panel area, how much sun you get, the weather and how much energy your car uses.',
+    'That\'s why the Sunrise Panels concept talks about additional energy rather than promising a specific range gain. Any real numbers would have to come from testing a finished design.']],
+  ['Parked in the sun: making the most of EV solar charging','3 min read · Tips',
+   ['If a vehicle has solar panels, where it sits during the day matters. A car parked in open sunlight collects far more light than one in a garage or under trees.',
+    'Simple habits help: choose uncovered spots when it\'s safe and practical, keep the panel surface clean, and remember that winter days are shorter and the sun sits lower in the sky, so output naturally drops.',
+    'Even a modest boost can be useful for drivers who park outside all day at work, or travellers who want a little extra flexibility between charging stops. Try different combinations in our <a href="#how-it-works">sunlight explorer</a>.']],
+  ['Why sustainable vehicle technology goes beyond the tailpipe','5 min read · Sustainability',
+   ['Electric cars have no tailpipe emissions, but the electricity that charges them still comes from somewhere. Where the grid relies on fossil fuels, charging carries an indirect footprint.',
+    'Solar-powered electric cars are one idea for closing that gap: generate some clean energy right where it\'s used. Others include home solar, workplace charging powered by renewables, and smarter charging at times when clean energy is plentiful.',
+    'No single technology solves everything. The goal is a mix of solutions that make clean driving more convenient, and that\'s the space Sunrise Panels is exploring.']]
+];
+$('posts').innerHTML=posts.map(([t,m,ps])=>`<article class="post"><details><summary><h2 style="font-size:22px;margin:0">${t}</h2><small>${m}</small></summary><div>${ps.map(p=>`<p>${p}</p>`).join('')}</div></details></article>`).join('')+'<p class="note">Articles are written for this project concept.</p>';
+
+/* routing */
+const pages=['home','about','product','how-it-works','sustainability','blog','contact','order','returns'];
+const navOf={'how-it-works':'product','order':'','returns':''};
+const nav=$('nav'),menu=document.querySelector('.menu');
+const metaDesc=document.querySelector('meta[name=description]');
+const show=()=>{
+  let h=location.hash.slice(1);if(!pages.includes(h))h='home';
+  document.querySelectorAll('.page').forEach(p=>p.classList.toggle('on',p.id==='p-'+h));
+  const n=h in navOf?navOf[h]:h;
+  document.querySelectorAll('nav a').forEach(a=>{if(a.getAttribute('href')==='#'+n)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
+  const pg=$('p-'+h);
+  document.title=pg.dataset.title;metaDesc.setAttribute('content',pg.dataset.desc);
+  nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label','Open menu');
+  window.scrollTo(0,0);
+};
+window.addEventListener('hashchange',show);show();
+menu.addEventListener('click',()=>{const o=nav.classList.toggle('open');menu.setAttribute('aria-expanded',o);menu.setAttribute('aria-label',o?'Close menu':'Open menu')});
+
+const emailOk=v=>/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+const money=v=>'$'+v.toLocaleString('en-CA',{minimumFractionDigits:2,maximumFractionDigits:2});
+
+/* contact form */
+$('form').addEventListener('submit',e=>{
+  e.preventDefault();
+  const n=$('f-name').value.trim(),em=$('f-email').value.trim(),m=$('f-msg').value.trim(),err=$('f-err'),ok=$('ok');
+  if(!n||!m){err.textContent='Please add your name and a message.';return}
+  if(!emailOk(em)){err.textContent='Please enter a valid email address.';return}
+  err.textContent='';ok.textContent='';
+  const b=document.createElement('b');b.textContent='Thanks, '+n+'.';
+  ok.append(b,document.createTextNode(' This is a demo form for the project concept, so your message wasn\'t actually sent anywhere.'));
+  $('form').style.display='none';ok.style.display='block';
+});
+
+/* checkout */
+const BASE=8999;
+const updTotal=()=>{const d=$('o-owner').checked;$('disc-line').hidden=!d;$('total').textContent=money(d?BASE*.9:BASE)};
+$('o-owner').addEventListener('change',updTotal);updTotal();
+$('order').addEventListener('submit',e=>{
+  e.preventDefault();
+  const err=$('o-err'),n=$('o-name').value.trim(),em=$('o-email').value.trim();
+  const miss=[];
+  if(!n)miss.push('your name');if(!emailOk(em))miss.push('a valid email');
+  if(!$('o-car').value)miss.push('your vehicle');if(!$('o-city').value.trim())miss.push('your installation city');
+  if(miss.length){err.textContent='Please add '+miss.join(', ')+'.';return}
+  if(!$('o-agree').checked){err.textContent='Please agree to the return and refund policy to continue.';return}
+  err.textContent='';
+  const method=document.querySelector('input[name=pay]:checked').value;
+  const ref='SUN-'+Math.random().toString(36).slice(2,8).toUpperCase();
+  const ok=$('o-ok');ok.textContent='';
+  const h=document.createElement('h3');h.textContent='Thanks, '+n+'. Your demo pre-order is ready.';
+  const p1=document.createElement('p');p1.textContent='Reference '+ref+' · '+$('o-car').value+' · '+$('total').textContent+' by '+method+'.';
+  const p2=document.createElement('p');p2.textContent='On the live site, you\'d now go to the payment provider\'s secure page to pay. This is a demo for the project concept, so no payment was taken.';
+  const a=document.createElement('a');a.href='#returns';a.textContent='Read the return and refund policy';
+  ok.append(h,p1,p2,a);
+  $('order').style.display='none';ok.style.display='block';ok.scrollIntoView({block:'center'});
+});
+}
+</script>
+</body>
+</html>
