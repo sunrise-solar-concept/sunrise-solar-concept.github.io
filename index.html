@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tesla Sunrise Solar Panels</title>
+<meta name="description" content="Tesla Sunrise Solar Panels is an academic concept for solar panels for electric vehicles: EV solar charging designed for convenience, sustainability and energy independence.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* VOICE: premium automotive launch page, calm and confident, honest about being a concept
+   IDEA: a car configurator / launch microsite, dark showroom hero then bright white pages
+   PICTURE: a generic EV in profile with a solar roof catching rays from a low red sun
+   COLOUR and TYPE: black #111 field, white #F5F5F5, one red #D71920 accent, silver #B9C4C9 lines; Inter
+   LAYOUT: sticky bar, full-bleed hero, single pages routed on the hash, stacked on phones */
+:root{color-scheme:light dark;--bg:light-dark(#F5F5F5,#111111);--ink:light-dark(#111111,#F5F5F5);--soft:light-dark(#4a4f52,#B9C4C9);--line:light-dark(#d7dde0,#2a2d2f);--card:light-dark(#ffffff,#1a1c1d);--red:#D71920;--silver:#B9C4C9;--blk:#111111}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Inter,Helvetica,Arial,sans-serif;overflow-x:clip;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{max-width:1240px;margin:0 auto}
+.band{padding:clamp(40px,6vw,88px) max(5vw,16px)}
+h1,h2,h3{line-height:1.08;text-wrap:balance;margin:0 0 .5em;font-weight:600;letter-spacing:-.01em}
+h1{font-size:clamp(36px,6vw,64px)}h2{font-size:clamp(28px,4vw,44px)}h3{font-size:20px;line-height:1.3}
+p{margin:0 0 1em;max-width:68ch}.lead{font-size:clamp(17px,1.6vw,19px);color:var(--soft)}
+.note{font-size:13px;color:var(--soft)}
+
+/* concept strip + header */
+.strip{background:var(--red);color:#fff;font-size:13px;text-align:center;padding:7px 16px}
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--blk) 92%,transparent);backdrop-filter:blur(10px);color:#F5F5F5}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px max(5vw,16px);max-width:1340px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:600;font-size:15px;line-height:1.2}
+.brand small{display:block;font-weight:400;color:var(--silver);font-size:12px}
+nav ul{list-style:none;margin:0;padding:0;display:flex;gap:4px;flex-wrap:wrap}
+nav a{display:block;padding:10px 12px;border-radius:6px;text-decoration:none;font-size:14px;color:#dfe5e8}
+nav a:hover,nav a[aria-current=page]{background:#ffffff14;color:#fff}
+nav a[aria-current=page]{box-shadow:inset 0 -2px 0 var(--red)}
+.menu{display:none;background:none;border:1px solid #ffffff33;color:#fff;border-radius:8px;width:44px;height:44px;cursor:pointer}
+.menu span{display:block;width:18px;height:2px;background:currentColor;margin:4px auto;transition:transform .2s}
+@media(max-width:900px){
+  .menu{display:block}
+  nav{position:absolute;left:0;right:0;top:100%;background:var(--blk);border-top:1px solid #ffffff1a;display:none;padding:8px max(5vw,16px) 16px}
+  nav.open{display:block}nav ul{flex-direction:column}nav a{padding:14px 12px;font-size:16px}
+}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 26px;border-radius:6px;font:600 15px Inter,sans-serif;text-decoration:none;border:1px solid transparent;cursor:pointer}
+.btn.red{background:var(--red);color:#fff}.btn.red:hover{background:#b8141a}
+.btn.ghost{border-color:currentColor;background:transparent}
+.btn:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+.row{display:flex;flex-wrap:wrap;gap:12px}
+
+/* hero */
+.hero{background:radial-gradient(120% 90% at 80% 10%,#3a1214 0%,#161011 38%,var(--blk) 70%);color:#F5F5F5;padding-bottom:clamp(16px,3vw,48px)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(20px,4vw,56px);align-items:center}
+.hero .lead{color:#c9d2d6}
+.hero svg{width:100%;height:auto}
+@media(max-width:820px){.hero-grid{grid-template-columns:minmax(0,1fr)}}
+.ray{stroke-dasharray:6 10;animation:flow 1.6s linear infinite}
+@keyframes flow{to{stroke-dashoffset:-32}}
+@media(prefers-reduced-motion:reduce){.ray{animation:none}}
+
+/* generic blocks */
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:24px}
+.card p:last-child{margin:0}
+.icon{width:40px;height:40px;margin-bottom:14px;color:var(--red)}
+.dark{background:var(--blk);color:#F5F5F5;border-bottom:1px solid #ffffff14}.dark .lead,.dark .note{color:#c9d2d6}
+.dark .card{background:#1a1c1d;border-color:#2a2d2f}
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,5vw,72px);align-items:start}
+@media(max-width:760px){.split{grid-template-columns:minmax(0,1fr)}}
+.kicker{color:var(--red);font-weight:600;font-size:14px;margin-bottom:10px}
+
+/* price */
+.price{border:1px solid var(--line);background:var(--card);border-radius:12px;padding:clamp(22px,3vw,36px)}
+.amount{font-size:clamp(44px,7vw,68px);font-weight:700;letter-spacing:-.02em;line-height:1;white-space:nowrap}
+.price ul{padding-left:20px;margin:16px 0}
+.price li{margin:6px 0}
+.offer{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:16px;margin-top:8px}
+.offer b{white-space:nowrap}
+
+/* steps */
+.steps{list-style:none;padding:0;margin:0;display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));counter-reset:s}
+.steps li{counter-increment:s;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:24px}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--blk);color:#fff;font-weight:600;margin-bottom:14px}
+:root[data-theme=dark] .steps li::before{background:var(--red)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]) .steps li::before{background:var(--red)}}
+
+/* faq + blog */
+details{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;list-style:none;padding:18px 36px 18px 0;font-weight:600;position:relative;min-height:44px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:4px;top:14px;font-size:24px;font-weight:400;color:var(--red)}
+details[open] summary::after{content:"−"}
+details>div{padding:0 0 18px}
+.post{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:0 24px;margin-bottom:16px}
+.post summary{padding-top:22px;padding-bottom:22px}
+.post summary small{display:block;font-weight:400;color:var(--soft);font-size:14px;margin-top:4px}
+.post details{border:0}
+
+/* form */
+form{display:grid;gap:16px}
+label{font-weight:500;font-size:14px;display:grid;gap:6px}
+input,select,textarea{font:16px Inter,sans-serif;padding:12px 14px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--ink);width:100%;min-height:48px}
+textarea{min-height:140px;resize:vertical}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+@media(max-width:560px){.two{grid-template-columns:minmax(0,1fr)}}
+.ok{display:none;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--red);border-radius:8px;padding:16px}
+.err{color:var(--red);font-size:13px;min-height:1em}
+.socials{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+.socials span{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:14px}
+
+/* pages */
+.page{display:none}.page.on{display:block}
+footer{background:var(--blk);color:#c9d2d6;font-size:14px}footer .note{color:#a3adb2}
+footer .wrap{display:grid;gap:24px;grid-template-columns:minmax(0,2fr) repeat(2,minmax(0,1fr))}
+footer a{text-decoration:none;display:inline-block;padding:4px 0}footer a:hover{color:#fff}
+footer ul{list-style:none;padding:0;margin:0}
+@media(max-width:700px){footer .wrap{grid-template-columns:minmax(0,1fr)}}
+</style>
+</head>
+<body>
+
+<div class="strip">Academic project concept. Not a Tesla, Inc. product, and not affiliated with or endorsed by Tesla.</div>
+
+<header>
+  <div class="bar">
+    <a class="brand" href="#home" aria-label="Tesla Sunrise Solar Panels home">
+      <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><path d="M5 22a12 12 0 0 1 24 0Z" fill="#D71920"/><path d="M2 25h30" stroke="#B9C4C9" stroke-width="2"/><path d="M8 29h18" stroke="#B9C4C9" stroke-width="2" opacity=".55"/></svg>
+      <span>Tesla Sunrise<small>Solar Panels concept</small></span>
+    </a>
+    <button class="menu" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+    <nav id="nav" aria-label="Main">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#product">Product</a></li>
+        <li><a href="#how-it-works">How it works</a></li>
+        <li><a href="#sustainability">Sustainability</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- HOME -->
+<section class="page" id="p-home" data-title="Tesla Sunrise Solar Panels | Solar Panels for Electric Vehicles (Concept)" data-desc="A proposed concept for EV solar charging: solar car panels that aim to give electric vehicle drivers another source of clean energy.">
+  <div class="band hero">
+    <div class="wrap hero-grid">
+      <div>
+        <h1>Charge Anywhere. Drive Everywhere.</h1>
+        <p class="lead">Discover Tesla Sunrise Solar Panels, a new concept designed to bring solar energy and electric transportation together. Explore the possibility of generating additional clean energy while supporting a more sustainable driving experience.</p>
+        <div class="row" style="margin:28px 0 8px"><a class="btn red" href="#product">Explore the Product</a><a class="btn ghost" href="#how-it-works">How it works</a></div>
+      </div>
+      <svg viewBox="0 0 800 440" role="img" aria-label="Illustration of an electric vehicle with solar panels on its roof under a rising sun">
+        <defs>
+          <radialGradient id="sun" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#ff6b4a"/><stop offset=".6" stop-color="#D71920"/><stop offset="1" stop-color="#D71920" stop-opacity="0"/></radialGradient>
+          <linearGradient id="body" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e9eef0"/><stop offset=".55" stop-color="#B9C4C9"/><stop offset="1" stop-color="#6d777c"/></linearGradient>
+          <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2b3338"/><stop offset="1" stop-color="#0d1114"/></linearGradient>
+          <pattern id="cells" width="22" height="14" patternUnits="userSpaceOnUse"><rect width="22" height="14" fill="url(#glass)"/><path d="M22 0V14M0 14H22" stroke="#5b7684" stroke-width="1.2"/></pattern>
+          <clipPath id="roof"><path d="M292 246Q350 198 424 194Q510 192 572 242Z"/></clipPath>
+        </defs>
+        <circle cx="640" cy="118" r="120" fill="url(#sun)" opacity=".55"/>
+        <circle cx="640" cy="118" r="54" fill="#D71920"/>
+        <g stroke="#B9C4C9" stroke-width="1.5" fill="none" opacity=".35">
+          <path d="M20 340V170h110v170M60 170V120h120v220M210 340V200h90v140M560 340V230h70v110M660 340V180h120v160"/>
+          <path d="M20 210h110M20 250h110M20 290h110M680 220h80M680 260h80M680 300h80"/>
+        </g>
+        <g stroke="#ff8a6e" stroke-width="2.5" stroke-linecap="round">
+          <path class="ray" d="M600 160L520 214"/><path class="ray" d="M590 140L440 196"/><path class="ray" d="M612 170L560 226" style="animation-delay:-.5s"/><path class="ray" d="M585 128L360 210" style="animation-delay:-1s"/>
+        </g>
+        <ellipse cx="402" cy="378" rx="300" ry="16" fill="#000" opacity=".55"/>
+        <path d="M0 372H800" stroke="#B9C4C9" stroke-width="1" opacity=".25"/>
+        <path d="M120 330Q118 290 160 276L262 254Q334 192 424 188Q526 186 596 240L660 260Q690 270 686 306L684 330Q684 344 670 344H610A46 46 0 0 0 518 344H298A46 46 0 0 0 206 344H134Q120 344 120 330Z" fill="url(#body)"/>
+        <path d="M262 254Q334 192 424 188Q526 186 596 240" fill="none" stroke="#fff" stroke-width="2" opacity=".7"/>
+        <rect x="280" y="180" width="310" height="80" fill="url(#cells)" clip-path="url(#roof)"/>
+        <path d="M292 246Q350 198 424 194Q510 192 572 242Z" fill="none" stroke="#D71920" stroke-width="2"/>
+        <path d="M150 300H676" stroke="#6d777c" stroke-width="1.5" opacity=".6"/>
+        <path d="M640 276h34" stroke="#D71920" stroke-width="5" stroke-linecap="round"/>
+        <path d="M128 286h22" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".8"/>
+        <g><circle cx="252" cy="344" r="40" fill="#151718"/><circle cx="252" cy="344" r="22" fill="#3a4246" stroke="#B9C4C9" stroke-width="3"/><circle cx="564" cy="344" r="40" fill="#151718"/><circle cx="564" cy="344" r="22" fill="#3a4246" stroke="#B9C4C9" stroke-width="3"/></g>
+      </svg>
+    </div>
+  </div>
+  <div class="band">
+    <div class="wrap split">
+      <div><div class="kicker">The concept</div><h2>A new approach to electric vehicle charging</h2></div>
+      <div>
+        <p class="lead">Tesla Sunrise Solar Panels introduces a new approach to electric vehicle charging by combining solar technology with modern transportation.</p>
+        <p>Designed with convenience and sustainability in mind, this proposed solution aims to give EV drivers another way to support their vehicle's energy needs.</p>
+        <a class="btn red" href="#product">Explore the Product</a>
+      </div>
+    </div>
+  </div>
+  <div class="band dark">
+    <div class="wrap">
+      <h2>Why solar on an EV?</h2>
+      <div class="grid" style="margin-top:28px" id="benefits-home"></div>
+    </div>
+  </div>
+  <div class="band">
+    <div class="wrap split">
+      <div><h2>Proposed price: <span style="white-space:nowrap">$8,999</span></h2><p class="lead">Includes professional installation and a one-year warranty. Current Tesla owners and app customers get 10% off a pre-order.</p></div>
+      <div class="row" style="align-self:center"><a class="btn red" href="#contact">Register interest</a><a class="btn ghost" href="#product">See details</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="page" id="p-about" data-title="About Us | Tesla Sunrise Solar Panels" data-desc="The mission, vision and purpose behind Tesla Sunrise Solar Panels, a sustainable vehicle technology concept.">
+  <div class="band dark"><div class="wrap"><div class="kicker">About us</div><h1>Powering electric driving with the sun</h1><p class="lead">Tesla Sunrise Solar Panels is a proposed solar panel system for Tesla and other electric vehicles, in the automotive technology and renewable energy space.</p></div></div>
+  <div class="band"><div class="wrap grid" id="mvp"></div></div>
+  <div class="band" style="padding-top:0"><div class="wrap split">
+    <div><h2>The company concept</h2></div>
+    <div>
+      <p>The product uses solar energy to provide additional power that may support vehicle charging and reduce dependence on traditional charging stations. It focuses on three things: convenience, sustainability and energy independence.</p>
+      <p>What sets it apart is the focus on combining solar technology with electric vehicles specifically, with an emphasis on modern design and the EV experience.</p>
+      <p class="note">This website presents a college project. Tesla Sunrise Solar Panels is not manufactured, approved or sold by Tesla, Inc.</p>
+    </div>
+  </div></div>
+  <div class="band dark"><div class="wrap split">
+    <div><h2>Who it's for</h2></div>
+    <div><p class="lead">EV owners and people thinking about buying one, especially Tesla owners.</p><p>We have in mind drivers roughly 30 to 60 years old who care about renewable energy, technology and automotive innovation: regular commuters, frequent travellers and anyone who wants more flexibility in how they charge.</p></div>
+  </div></div>
+</section>
+
+<!-- PRODUCT -->
+<section class="page" id="p-product" data-title="Product | Electric Vehicle Solar Panels Concept | Tesla Sunrise" data-desc="Proposed features, benefits and pricing for the Tesla Sunrise electric vehicle solar panels concept.">
+  <div class="band dark"><div class="wrap"><div class="kicker">Product</div><h1>Electric vehicle solar panels, reimagined as part of the car</h1><p class="lead">A proposed solar panel system for Tesla and other EVs that generates additional clean energy to support battery charging.</p></div></div>
+  <div class="band"><div class="wrap">
+    <h2>Proposed benefits</h2>
+    <div class="grid" style="margin-top:24px" id="benefits"></div>
+  </div></div>
+  <div class="band" style="padding-top:0"><div class="wrap split">
+    <div class="price">
+      <div class="kicker">Proposed price</div>
+      <div class="amount">$8,999</div>
+      <p class="note" style="margin-top:6px">per unit</p>
+      <ul><li>Professional installation included</li><li>One-year warranty</li><li>Installed by qualified technicians</li></ul>
+      <div class="offer"><span>Pre-order price for current Tesla owners and app customers (10% off)</span><b>$8,099.10</b></div>
+      <div class="row" style="margin-top:20px"><a class="btn red" href="#contact">Register pre-order interest</a></div>
+    </div>
+    <div>
+      <h3>About performance figures</h3>
+      <p>Verified charging speeds, range increases, compatibility, installation specifications and performance figures have not been established yet. Solar output depends on panel area, sunlight, weather and how much energy the vehicle needs.</p>
+      <p>We won't publish numbers until the final design has been built and tested.</p>
+      <h3 style="margin-top:28px">Where you could find it (proposed)</h3>
+      <ul id="channels" style="padding-left:20px"></ul>
+    </div>
+  </div></div>
+  <div class="band dark"><div class="wrap split">
+    <div><h2>Frequently asked questions</h2><p class="lead">Quick answers about the concept.</p></div>
+    <div id="faq"></div>
+  </div></div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="page" id="p-how-it-works" data-title="How It Works | EV Solar Charging Explained | Tesla Sunrise" data-desc="A simple explanation of how solar car panels turn sunlight into electricity that can support electric vehicle charging.">
+  <div class="band dark"><div class="wrap"><div class="kicker">How it works</div><h1>From sunlight to your battery, in plain terms</h1><p class="lead">Solar panels turn light into electricity. Here's how the concept would put that energy to work in an electric vehicle.</p></div></div>
+  <div class="band"><div class="wrap"><ol class="steps" id="steps"></ol></div></div>
+  <div class="band" style="padding-top:0"><div class="wrap split">
+    <div><h2>Parked or driving?</h2></div>
+    <div>
+      <p>The concept includes generating solar energy while the vehicle is parked. Generating energy while driving would depend on whether the final design supports it.</p>
+      <p>Either way, solar is meant to add to your normal charging, not replace it. How much it adds depends on panel area, how sunny it is, the weather and the vehicle's own energy use.</p>
+      <p class="note">No charging speeds or range figures are claimed here. They'll only be shared once the system has been designed and tested.</p>
+    </div>
+  </div></div>
+</section>
+
+<!-- SUSTAINABILITY -->
+<section class="page" id="p-sustainability" data-title="Sustainability | Sustainable Vehicle Technology | Tesla Sunrise" data-desc="How Tesla Sunrise Solar Panels supports renewable energy in transportation and sustainable vehicle technology.">
+  <div class="band dark"><div class="wrap"><div class="kicker">Sustainability</div><h1>Cleaner energy for the way we move</h1><p class="lead">Electric vehicles are cleaner when the electricity behind them is clean. Solar on the car itself brings the energy source one step closer.</p></div></div>
+  <div class="band"><div class="wrap"><div class="grid" id="goals"></div></div></div>
+  <div class="band" style="padding-top:0"><div class="wrap split">
+    <div><h2>Built to last outdoors</h2></div>
+    <div><p>The product would rely on photovoltaic cells, protective glass, wiring, mounting structures, electronic controllers and power-management parts, all made for outdoor automotive use.</p><p>We'd look for suppliers with real experience in solar technology, automotive components, durability and quality control. No suppliers have been confirmed.</p></div>
+  </div></div>
+</section>
+
+<!-- BLOG -->
+<section class="page" id="p-blog" data-title="Blog | EV, Solar and Sustainable Transportation | Tesla Sunrise" data-desc="Articles about electric vehicles, EV solar charging, solar-powered electric cars and sustainable transportation.">
+  <div class="band dark"><div class="wrap"><div class="kicker">Blog</div><h1>Notes on EVs, solar and getting around cleanly</h1><p class="lead">Short reads on solar charging, electric vehicles and sustainable transportation.</p></div></div>
+  <div class="band"><div class="wrap" style="max-width:860px" id="posts"></div></div>
+</section>
+
+<!-- CONTACT -->
+<section class="page" id="p-contact" data-title="Contact Us | Tesla Sunrise Solar Panels" data-desc="Contact the Tesla Sunrise Solar Panels project team with questions, feedback or pre-order interest.">
+  <div class="band dark"><div class="wrap"><div class="kicker">Contact us</div><h1>Questions? We'd like to hear them.</h1><p class="lead">Ask about the concept, share feedback or register pre-order interest.</p></div></div>
+  <div class="band"><div class="wrap split">
+    <div>
+      <form id="form" novalidate>
+        <div class="two">
+          <label>Name<input id="f-name" name="name" autocomplete="name" required></label>
+          <label>Email<input id="f-email" name="email" type="email" autocomplete="email" required></label>
+        </div>
+        <label>Topic<select id="f-topic" name="topic"><option>General question</option><option>Pre-order interest</option><option>Feedback</option><option>Partnership</option></select></label>
+        <label><span>Do you own a Tesla or other EV?</span><select id="f-ev" name="ev"><option>Yes, a Tesla</option><option>Yes, another EV</option><option>Not yet</option></select></label>
+        <label>Message<textarea id="f-msg" name="message" required></textarea></label>
+        <div class="err" id="f-err" role="alert"></div>
+        <div><button class="btn red" type="submit">Send message</button></div>
+      </form>
+      <div class="ok" id="ok" role="status"></div>
+    </div>
+    <div>
+      <h3>Follow the project</h3>
+      <p>Product photos and announcements on Instagram, short explainers on TikTok, and longer demos on YouTube. We plan to post three to four times a week.</p>
+      <div class="socials"><span>Instagram</span><span>TikTok</span><span>YouTube</span></div>
+      <p class="note" style="margin-top:10px">Accounts launch with the project.</p>
+      <h3 style="margin-top:32px">Solar Drive Experience</h3>
+      <p>We're planning hands-on demonstrations so you can see the concept up close. Pick "Feedback" or "Pre-order interest" in the form to hear about dates.</p>
+      <h3 style="margin-top:32px">Common questions</h3>
+      <p><a href="#product">Read the FAQ</a> on the product page.</p>
+    </div>
+  </div></div>
+</section>
+</main>
+
+<footer class="band">
+  <div class="wrap">
+    <div>
+      <a class="brand" href="#home" style="color:#F5F5F5"><svg width="30" height="30" viewBox="0 0 34 34" aria-hidden="true"><path d="M5 22a12 12 0 0 1 24 0Z" fill="#D71920"/><path d="M2 25h30" stroke="#B9C4C9" stroke-width="2"/></svg><span>Tesla Sunrise Solar Panels</span></a>
+      <p style="margin-top:12px">Charge Anywhere. Drive Everywhere.</p>
+      <p class="note">Tesla Sunrise Solar Panels is a proposed academic product concept. It is not a Tesla, Inc. product and is not affiliated with, approved or endorsed by Tesla. Retail and showroom channels are proposals only. All prices are proposed.</p>
+    </div>
+    <div><b style="color:#fff">Explore</b><ul><li><a href="#product">Product</a></li><li><a href="#how-it-works">How it works</a></li><li><a href="#sustainability">Sustainability</a></li></ul></div>
+    <div><b style="color:#fff">Company</b><ul><li><a href="#about">About</a></li><li><a href="#blog">Blog</a></li><li><a href="#contact">Contact</a></li></ul></div>
+  </div>
+</footer>
+
+<script>
+{
+const I={
+  sun:'<circle cx="20" cy="20" r="7" fill="currentColor"/><path d="M20 3v5M20 32v5M3 20h5M32 20h5M8 8l3.5 3.5M28.5 28.5L32 32M8 32l3.5-3.5M28.5 11.5L32 8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>',
+  plug:'<path d="M14 4v8M26 4v8M10 12h20v6a10 10 0 0 1-20 0zM20 28v8" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round"/>',
+  coin:'<circle cx="20" cy="20" r="15" stroke="currentColor" stroke-width="2.5" fill="none"/><path d="M24 14h-6a3 3 0 0 0 0 6h4a3 3 0 0 1 0 6h-7M20 10v20" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round"/>',
+  leaf:'<path d="M8 32C8 16 18 8 34 6c-1 16-9 26-24 26zM8 32l14-14" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>',
+  bolt:'<path d="M22 3L8 23h11l-2 14 15-21H21z" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linejoin="round"/>',
+  target:'<circle cx="20" cy="20" r="15" stroke="currentColor" stroke-width="2.5" fill="none"/><circle cx="20" cy="20" r="8" stroke="currentColor" stroke-width="2.5" fill="none"/><circle cx="20" cy="20" r="2.5" fill="currentColor"/>',
+  eye:'<path d="M3 20s6-11 17-11 17 11 17 11-6 11-17 11S3 20 3 20z" stroke="currentColor" stroke-width="2.5" fill="none"/><circle cx="20" cy="20" r="5" fill="currentColor"/>',
+  heart:'<path d="M20 34S5 25 5 14a8 8 0 0 1 15-4 8 8 0 0 1 15 4c0 11-15 20-15 20z" stroke="currentColor" stroke-width="2.5" fill="none"/>'
+};
+const ic=k=>`<svg class="icon" viewBox="0 0 40 40" aria-hidden="true">${I[k]}</svg>`;
+const card=(k,t,p)=>`<div class="card">${ic(k)}<h3>${t}</h3><p>${p}</p></div>`;
+
+const benefits=[
+  ['sun','Renewable energy','Uses sunlight as an extra source of energy for your vehicle.'],
+  ['plug','Charging convenience','Aims to generate extra energy while parked, and while driving if the final design supports it.'],
+  ['coin','Potential cost savings','May reduce the electricity you need to buy for charging.'],
+  ['leaf','Sustainability','Supports more renewable energy in everyday transportation.'],
+  ['bolt','Energy independence','Gives you another potential source of vehicle energy beyond the plug.']
+];
+document.getElementById('benefits').innerHTML=benefits.map(b=>card(...b)).join('');
+document.getElementById('benefits-home').innerHTML=benefits.slice(0,4).map(b=>card(...b)).join('');
+
+document.getElementById('mvp').innerHTML=[
+  ['target','Mission','To provide Tesla and other EV drivers with an innovative solar panel solution that helps charge vehicles using clean energy, reduces reliance on plug-in charging, and makes electric driving more convenient and sustainable.'],
+  ['eye','Vision','A future where electric vehicles are powered more efficiently through integrated solar technology, making transportation cleaner, smarter and more energy independent.'],
+  ['heart','Purpose','To improve charging convenience for EV users by generating additional energy, supporting battery charging, reducing charging costs and lowering environmental impact.']
+].map(b=>card(...b)).join('');
+
+document.getElementById('channels').innerHTML=[
+  '<b>Company website and mobile app:</b> the main place for product info and pre-order requests.',
+  '<b>Showrooms and service centres:</b> talk to knowledgeable staff, subject to approval and availability.',
+  '<b>Retail partners:</b> potential partners such as Best Buy and Home Depot. No agreements are in place.',
+  '<b>Installation partners:</b> qualified technicians for installation and support.'
+].map(c=>`<li style="margin:8px 0">${c}</li>`).join('');
+
+const faq=[
+  ['Does the product charge a vehicle using sunlight?','The concept uses solar panels to generate additional electrical energy that can support vehicle charging. Actual performance depends on the final technical design.'],
+  ['Can the panels work while the vehicle is parked?','The proposed concept includes solar energy generation while parked. The final system would need to be designed and tested to confirm its capabilities.'],
+  ['How much does the product cost?','The proposed project price is $8,999, including professional installation and a one-year warranty. Current Tesla owners and customers buying through the app would get a 10% pre-order discount.'],
+  ['Is installation included?','Yes. The proposed price includes professional installation.'],
+  ['Is the product available for purchase?','No. This is a proposed academic product concept, not a confirmed commercial Tesla product.']
+];
+document.getElementById('faq').innerHTML=faq.map(([q,a])=>`<details><summary>${q}</summary><div><p>${a}</p></div></details>`).join('');
+
+document.getElementById('steps').innerHTML=[
+  ['Sunlight reaches the panels','Photovoltaic solar cells on the vehicle are exposed to daylight, whether the car is parked outside or on the road.'],
+  ['Cells make electricity','The cells convert light into direct-current (DC) electricity. More sun and more panel area means more energy.'],
+  ['A controller manages it','Electronic controllers and power-management parts regulate that energy so it can be used safely by the vehicle.'],
+  ['Energy supports the battery','The extra energy goes toward supporting the battery, adding to the charging you already do.']
+].map(([t,p])=>`<li><h3>${t}</h3><p style="margin:0">${p}</p></li>`).join('');
+
+document.getElementById('goals').innerHTML=[
+  ['sun','More renewable energy in transportation','Sunlight is a renewable source. Using it on the vehicle adds clean energy to every drive.'],
+  ['plug','Less reliance on the grid','Extra solar energy can reduce how often you need to plug in, depending on conditions.'],
+  ['leaf','Lower environmental impact','Less purchased electricity for charging can mean a smaller footprint, especially where the grid relies on fossil fuels.'],
+  ['bolt','Smarter, more independent energy','Pairing solar and EVs moves transportation toward cleaner, more self-sufficient energy.']
+].map(b=>card(...b)).join('');
+
+const posts=[
+  ['Can solar panels really help charge an electric vehicle?','4 min read · Solar charging',
+   ['Solar panels for electric vehicles are getting a lot of attention, and it\'s fair to ask what they can realistically do. A solar panel produces electricity whenever light hits it. Mount panels on a car and that electricity can, in principle, go toward the battery.',
+    'The catch is surface area. A car roof is small compared to the solar arrays on a house, so vehicle-mounted solar is best thought of as a top-up, not a replacement for plugging in. How much it adds depends on the panel area, how much sun you get, the weather and how much energy your car uses.',
+    'That\'s why the Tesla Sunrise concept talks about additional energy rather than promising a specific range gain. Any real numbers would have to come from testing a finished design.']],
+  ['Parked in the sun: making the most of EV solar charging','3 min read · Tips',
+   ['If a vehicle has solar panels, where it sits during the day matters. A car parked in open sunlight collects far more light than one in a garage or under trees.',
+    'Simple habits help: choose uncovered spots when it\'s safe and practical, keep the panel surface clean, and remember that winter days are shorter and the sun sits lower in the sky, so output naturally drops.',
+    'Even a modest boost can be useful for drivers who park outside all day at work, or travellers who want a little extra flexibility between charging stops.']],
+  ['Why sustainable vehicle technology goes beyond the tailpipe','5 min read · Sustainability',
+   ['Electric cars have no tailpipe emissions, but the electricity that charges them still comes from somewhere. Where the grid relies on fossil fuels, charging carries an indirect footprint.',
+    'Solar-powered electric cars are one idea for closing that gap: generate some clean energy right where it\'s used. Others include home solar, workplace charging powered by renewables, and smarter charging at times when clean energy is plentiful.',
+    'No single technology solves everything. The goal is a mix of solutions that make clean driving more convenient, and that\'s the space Tesla Sunrise is exploring.']]
+];
+document.getElementById('posts').innerHTML=posts.map(([t,m,ps])=>`<article class="post"><details><summary><h2 style="font-size:22px;margin:0">${t}</h2><small>${m}</small></summary><div>${ps.map(p=>`<p>${p}</p>`).join('')}</div></details></article>`).join('')+'<p class="note">Articles are written for this project concept.</p>';
+
+/* routing */
+const pages=['home','about','product','how-it-works','sustainability','blog','contact'];
+const nav=document.getElementById('nav'),menu=document.querySelector('.menu');
+const metaDesc=document.querySelector('meta[name=description]');
+const show=()=>{
+  let h=location.hash.slice(1);if(!pages.includes(h))h='home';
+  document.querySelectorAll('.page').forEach(p=>p.classList.toggle('on',p.id==='p-'+h));
+  document.querySelectorAll('nav a').forEach(a=>{if(a.getAttribute('href')==='#'+h)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
+  const pg=document.getElementById('p-'+h);
+  document.title=pg.dataset.title;metaDesc.setAttribute('content',pg.dataset.desc);
+  nav.classList.remove('open');menu.setAttribute('aria-expanded','false');
+  window.scrollTo(0,0);
+};
+window.addEventListener('hashchange',show);show();
+menu.addEventListener('click',()=>{const o=nav.classList.toggle('open');menu.setAttribute('aria-expanded',o);menu.setAttribute('aria-label',o?'Close menu':'Open menu')});
+
+/* form */
+const form=document.getElementById('form'),err=document.getElementById('f-err'),ok=document.getElementById('ok');
+form.addEventListener('submit',e=>{
+  e.preventDefault();
+  const n=document.getElementById('f-name').value.trim(),em=document.getElementById('f-email').value.trim(),m=document.getElementById('f-msg').value.trim();
+  if(!n||!m){err.textContent='Please add your name and a message.';return}
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)){err.textContent='Please enter a valid email address.';return}
+  err.textContent='';
+  ok.textContent='';
+  const b=document.createElement('b');b.textContent='Thanks, '+n+'.';
+  ok.append(b,document.createTextNode(' This is a demo form for the project concept, so your message wasn\'t actually sent anywhere.'));
+  form.style.display='none';ok.style.display='block';
+});
+}
+</script>
+</body>
+</html>
